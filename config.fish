@@ -38,6 +38,12 @@ export PATH="~/anaconda3/bin:$PATH"
 source ~/anaconda3/etc/fish/conf.d/conda.fish
 
 alias freeze 'conda env export > environment.yaml ; and pip freeze > requirements.txt'
+
+function freezeos
+  conda env export --no-builds > "($argv)_environment.yaml"
+  pip freeze > "($argv)_requirements.txt"
+end
+
 alias activate 'conda activate '
 
 function mount
