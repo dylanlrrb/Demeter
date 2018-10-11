@@ -42,6 +42,7 @@ alias activate 'conda activate '
 
 function mount
   cd ~
+  lsblk
   mkdir projects
   sudo mount /dev/xvdf projects
   sudo chown `whoami` projects
