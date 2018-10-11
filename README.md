@@ -3,7 +3,6 @@
 ```console
 #!/bin/bash
 sudo apt-get install fish -y
-fish
 touch .bash_profile
 echo "fish" >> .bash_profile
 cd .config/fish
