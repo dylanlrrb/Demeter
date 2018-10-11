@@ -55,3 +55,5 @@ function mount
 end
 
 alias P 'cd projects'
+
+alias permit "chmod +x "
