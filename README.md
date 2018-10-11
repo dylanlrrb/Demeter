@@ -2,7 +2,7 @@
 
 ```console
 #!/bin/bash
-apt-get install fish
+sudo apt-get install fish
 fish
 touch .bash_profile
 echo "fish" >> .bash_profile
