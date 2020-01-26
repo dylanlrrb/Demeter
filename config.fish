@@ -53,7 +53,7 @@ function micro
   ssh -i ~/.ssh/aws-dylan-r-lrrb.pem ec2-user@ec2-34-210-224-29.us-west-2.compute.amazonaws.com
 end
 
-function desk
+function mybox
   ssh -i ~/.ssh/desktop_rsa  dylan@192.168.0.19
 end
 
