@@ -1,5 +1,6 @@
 function updatefish
   cd ~/.config/fish/fishsticks
+  git pull
   cp config.fish ..
 end
 
