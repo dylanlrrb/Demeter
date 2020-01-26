@@ -1,3 +1,7 @@
+function updatefish
+  cd ~/.config/fish/fishsticks
+  cp config.fish ..
+end
 
 ### GIT HELPERS
 
@@ -55,17 +59,17 @@ end
 #   bass source ~/.nvm/nvm.sh ';' nvm $argv
 # end
 
-function node6
-  nvm use v6
-end
+# function node6
+#   nvm use v6
+# end
 
-function node8
-  nvm use v8
-end
+# function node8
+#   nvm use v8
+# end
 
-function node10
-  nvm use v10
-end
+# function node10
+#   nvm use v10
+# end
 
 
 ### Conda working with fish
