@@ -115,7 +115,7 @@ end
 # Tool used for converting to PDF
 # export PATH="/Library/TeX/Distributions/.DefaultTeX/Contents/Programs/texbin:$PATH"
 
-alias jp 'jupyter notebook'
+alias jp 'jupyter notebook --no-browser --port=8889'
 alias html 'jupyter nbconvert --to html '
 alias pdf 'jupyter nbconvert --to pdf '
 
@@ -139,3 +139,4 @@ alias permit "chmod +x "
 
 ### ssh-add -K ~/.ssh/wwkp
 
+updatefish
