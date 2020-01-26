@@ -1,7 +1,7 @@
 function updatefish
   cd ~/.config/fish/fishsticks
-  git pull origin linux
   git checkout linux
+  git pull origin linux
   cp config.fish ..
   cd ~
 end
