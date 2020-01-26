@@ -51,9 +51,9 @@ function ip
   ifconfig en0 | sed -En 's/127.0.0.1//;s/.*inet (addr:)?(([0-9]*\.){3}[0-9]*).*/\2/p'
 end
 
-function nvm
-  bass source ~/.nvm/nvm.sh ';' nvm $argv
-end
+# function nvm
+#   bass source ~/.nvm/nvm.sh ';' nvm $argv
+# end
 
 function node6
   nvm use v6
@@ -108,7 +108,7 @@ end
 ### Jupyter Notebook stuff
 
 # Tool used for converting to PDF
-export PATH="/Library/TeX/Distributions/.DefaultTeX/Contents/Programs/texbin:$PATH"
+# export PATH="/Library/TeX/Distributions/.DefaultTeX/Contents/Programs/texbin:$PATH"
 
 alias jp 'jupyter notebook'
 alias html 'jupyter nbconvert --to html '
