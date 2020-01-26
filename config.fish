@@ -3,6 +3,7 @@ function updatefish
   git pull origin macos
   git checkout macos
   cp config.fish ..
+  cd ~
 end
 
 ### GIT HELPERS
