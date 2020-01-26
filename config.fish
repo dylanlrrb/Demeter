@@ -129,7 +129,7 @@ alias permit "chmod +x "
 
 ### SET NODE VERSION ON START
 
-nvm use v8.11.1
+# nvm use v8.11.1
 
 ### SET UP SECRETS ON START
 ### not really sure how to use rn
