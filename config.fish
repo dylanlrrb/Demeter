@@ -1,6 +1,6 @@
 function updatefish
   cd ~/.config/fish/fishsticks
-  git pull
+  git pull origin/macos
   cp config.fish ..
 end
 
@@ -34,6 +34,7 @@ alias lsa 'ls -a'
 alias ll 'ls -l'
 alias lla 'ls -la'
 alias D 'cd ~/Desktop'
+### alias screeps 'cd ~/Library/Application\ Support/Screeps/scripts/'
 
 ### SSH HELPERS
 
@@ -56,36 +57,21 @@ function ip
   ifconfig en0 | sed -En 's/127.0.0.1//;s/.*inet (addr:)?(([0-9]*\.){3}[0-9]*).*/\2/p'
 end
 
-# function nvm
-#   bass source ~/.nvm/nvm.sh ';' nvm $argv
-# end
-
-# function node6
-#   nvm use v6
-# end
-
-# function node8
-#   nvm use v8
-# end
-
-# function node10
-#   nvm use v10
-# end
-
-
-### Conda working with fish
-
-export PATH="~/miniconda3/bin:$PATH"
-source ~/miniconda3/etc/fish/conf.d/conda.fish
-
-alias freeze 'conda env export > environment.yaml ; and pip freeze > requirements.txt'
-
-function freezeos
-  conda env export --no-builds > "($argv)_environment.yaml"
-  pip freeze > "($argv)_requirements.txt"
+function nvm
+  bass source ~/.nvm/nvm.sh ';' nvm $argv
 end
 
-alias activate 'conda activate '
+function node6
+  nvm use v6
+end
+
+function node8
+  nvm use v8
+end
+
+function node10
+  nvm use v10
+end
 
 ### ASM Helpers
 function compile
@@ -102,20 +88,27 @@ function c
   gcc $argv.c -o $argv & eval ./$argv
 end
 
-function mount
-  cd ~
-  lsblk
-  mkdir projects
-  sudo mount /dev/xvdf projects
-  sudo chown `whoami` projects
+
+### Conda working with fish
+
+export PATH="/Users/dylanlarrabee/miniconda3/bin:$PATH"
+source ~/miniconda3/etc/fish/conf.d/conda.fish
+
+alias freeze 'conda env export --no-builds > environment.yaml ; and pip freeze > requirements.txt'
+
+function freezeos
+  conda env export --no-builds > "($argv)_environment.yaml"
+  pip freeze > "($argv)_requirements.txt"
 end
+
+alias activate 'conda activate '
 
 ### Jupyter Notebook stuff
 
 # Tool used for converting to PDF
-# export PATH="/Library/TeX/Distributions/.DefaultTeX/Contents/Programs/texbin:$PATH"
+export PATH="/Library/TeX/Distributions/.DefaultTeX/Contents/Programs/texbin:$PATH"
 
-alias jp 'jupyter notebook --no-browser --port=8889'
+alias jp 'jupyter notebook'
 alias html 'jupyter nbconvert --to html '
 alias pdf 'jupyter nbconvert --to pdf '
 
@@ -129,7 +122,7 @@ alias permit "chmod +x "
 
 ### SET NODE VERSION ON START
 
-# nvm use v8.11.1
+nvm use v8.11.1
 
 ### SET UP SECRETS ON START
 ### not really sure how to use rn
@@ -139,4 +132,3 @@ alias permit "chmod +x "
 
 ### ssh-add -K ~/.ssh/wwkp
 
-updatefish
