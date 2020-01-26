@@ -133,3 +133,4 @@ nvm use v8.11.1
 
 ### ssh-add -K ~/.ssh/wwkp
 
+updatefish
