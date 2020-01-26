@@ -1,6 +1,6 @@
 function updatefish
   cd ~/.config/fish/fishsticks
-  git pull origin/macos
+  git pull origin macos
   cp config.fish ..
 end
 
