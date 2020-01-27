@@ -19,3 +19,4 @@ fi
 cp config.fish ..
 chsh -s `which fish`
 cd ~
+echo "Please restart your shell"
