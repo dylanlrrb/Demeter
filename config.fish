@@ -141,7 +141,7 @@ nvm use v8.11.1
 ### Bash-Git-Prompt working with Fish
 if [ -f "$HOME/.bash-git-prompt/gitprompt.sh" ]
   set GIT_PROMPT_ONLY_IN_REPO 1
-  source $HOME/.bash-git-prompt/gitprompt.sh
+  source $HOME/.bash-git-prompt/gitprompt.fish
 end
 
 updatefish
