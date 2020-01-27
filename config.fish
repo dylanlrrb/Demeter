@@ -4,6 +4,7 @@ function updatefish
   git pull origin darwin
   cp config.fish ..
   cd ~
+  set -g theme_powerline_fonts no
 end
 
 ### GIT HELPERS
