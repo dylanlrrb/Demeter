@@ -1,7 +1,7 @@
 #!/bin/bash
 
 sudo apt-get install fish -y
-cd .config/fish
+cd ~/.config/fish
 git clone https://github.com/dylanlrrb/fishsticks.git
 cd fishsticks
 os="$(uname -s)"
