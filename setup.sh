@@ -1,6 +1,6 @@
 #!/bin/bash
 
-os="$(uname -s)"
+os==`echo "$(uname -s)" | tr "[:upper:]" "[:lower:]"`
 if [ "$os" == "Darwin" ]
 then
     brew install fish
