@@ -93,4 +93,7 @@ alias restrict "chmod 400 "
 # for opening up permissions on .sh scripts
 alias permit "chmod +x "
 
+# turn off the desktop
+alias off "shutdown -h now"
+
 updatefish
