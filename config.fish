@@ -100,11 +100,10 @@ end
 export PATH="/Users/dylanlarrabee/miniconda3/bin:$PATH"
 source ~/miniconda3/etc/fish/conf.d/conda.fish
 
-alias freeze 'conda env export --no-builds > environment.yaml ; and pip freeze > requirements.txt'
-
-function freezeos
-  conda env export --no-builds > "($argv)_environment.yaml"
-  pip freeze > "($argv)_requirements.txt"
+function freeze
+  set os (uname -s)
+  conda env export --no-builds > "$os-environment.yaml"
+  pip freeze > "$os-requirements.txt"
 end
 
 alias activate 'conda activate '
