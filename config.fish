@@ -94,6 +94,6 @@ alias restrict "chmod 400 "
 alias permit "chmod +x "
 
 # turn off the desktop
-alias off "shutdown -h now"
+alias off "sudo shutdown -h now"
 
 updatefish
