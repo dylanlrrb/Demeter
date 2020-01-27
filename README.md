@@ -10,3 +10,4 @@ TODO:
 - Set up oy-my-fish
 - miniconda install
 - directory structure
+- install homebrew on mac
