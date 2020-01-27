@@ -13,5 +13,7 @@ cd fishsticks
 git checkout $os
 cp config.fish ..
 chsh -s `which fish`
+curl -L https://get.oh-my.fish | fish
+omf install bobthefish
 cd ~
 echo "Please restart your shell"
