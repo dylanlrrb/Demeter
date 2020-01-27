@@ -1,10 +1,15 @@
 #!/bin/bash
 
-sudo apt-get install fish -y
+os="$(uname -s)"
+if [ $os -eq "Darwin" ]
+then
+    brew install fish
+else
+    sudo apt-get install fish -y
+fi
 cd ~/.config/fish
 git clone https://github.com/dylanlrrb/fishsticks.git
 cd fishsticks
-os="$(uname -s)"
 if [ $os -eq "Darwin" ]
 then
     git checkout macos
