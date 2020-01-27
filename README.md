@@ -7,3 +7,7 @@ git clone https://github.com/dylanlrrb/fishsticks.git
 cd fishsticks
 bash setup.sh
 ```
+TODO:
+
+- conditinally source miniconda based on if it is installed
+- figure out configuring secrets
