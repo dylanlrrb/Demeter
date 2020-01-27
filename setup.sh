@@ -10,12 +10,7 @@ fi
 cd ~/.config/fish
 git clone https://github.com/dylanlrrb/fishsticks.git
 cd fishsticks
-if [ "$os" == "Darwin" ]
-then
-    git checkout macos
-else
-    git checkout linux
-fi
+git checkout $os
 cp config.fish ..
 chsh -s `which fish`
 cd ~
