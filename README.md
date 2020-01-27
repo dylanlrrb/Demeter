@@ -7,7 +7,7 @@ bash setup.sh
 ```
 TODO:
 
-- Set up oy-my-fish
+- Set up oh-my-fish
 - miniconda install
 - directory structure
 - install homebrew on mac
