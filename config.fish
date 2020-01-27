@@ -94,9 +94,9 @@ alias restrict "chmod 400 "
 alias permit "chmod +x "
 
 ### Bash-Git-Prompt working with Fish
-if [ -f "$HOME/.bash-git-prompt/gitprompt.sh" ]; then
-    GIT_PROMPT_ONLY_IN_REPO=1
-    source $HOME/.bash-git-prompt/gitprompt.sh
-fi
+if [ -f "$HOME/.bash-git-prompt/gitprompt.sh" ]
+  GIT_PROMPT_ONLY_IN_REPO=1
+  source $HOME/.bash-git-prompt/gitprompt.sh
+end
 
 updatefish
