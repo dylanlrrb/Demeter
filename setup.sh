@@ -14,3 +14,4 @@ fi
 cp config.fish ..
 chsh -s `which fish`
 cd ~
+git clone https://github.com/magicmonty/bash-git-prompt.git ~/.bash-git-prompt --depth=1
