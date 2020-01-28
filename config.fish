@@ -93,7 +93,10 @@ alias restrict "chmod 400 "
 # for opening up permissions on .sh scripts
 alias permit "chmod +x "
 
-# turn off the desktop
-alias off "sudo shutdown -h now"
+# turn off the desktop in one minute and exit
+function off 
+  sudo shutdown -h 1
+  exit
+end
 
 updatefish
