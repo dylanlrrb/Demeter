@@ -15,5 +15,4 @@ cp config.fish ..
 chsh -s `which fish`
 curl -L https://get.oh-my.fish | fish
 cd ~
-omf install bobthefish
 echo "Please restart your shell"
