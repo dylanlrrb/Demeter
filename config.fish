@@ -39,17 +39,6 @@ alias lla 'ls -la'
 alias D 'cd ~/Desktop'
 alias c 'clear'
 
-### SSH HELPERS
-
-# Usage: `ai <address of instance>` 
-function ai 
-  ssh -i ~/.ssh/aws-dylan-r-lrrb.pem -L 8888:localhost:8888 ubuntu@$argv
-end
-
-function micro
-  ssh -i ~/.ssh/aws-dylan-r-lrrb.pem ec2-user@ec2-34-210-224-29.us-west-2.compute.amazonaws.com
-end
-
 ### RANDOM HELPERS
 
 function ip
