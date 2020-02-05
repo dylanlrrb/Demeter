@@ -57,28 +57,13 @@ function ip
 end
 
 
-
-### Conda working with fish
-
-export PATH="~/miniconda3/bin:$PATH"
-source ~/miniconda3/etc/fish/conf.d/conda.fish
-
-function freeze
-  set os (uname -s)
-  conda env export --no-builds > "$os-environment.yaml"
-  pip freeze > "$os-requirements.txt"
-end
-
-alias activate 'conda activate '
-
-
-function mount
-  cd ~
-  lsblk
-  mkdir projects
-  sudo mount /dev/xvdf projects
-  sudo chown `whoami` projects
-end
+# function mount
+#   cd ~
+#   lsblk
+#   mkdir projects
+#   sudo mount /dev/xvdf projects
+#   sudo chown `whoami` projects
+# end
 
 ### Jupyter Notebook stuff
 
