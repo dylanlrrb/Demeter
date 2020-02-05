@@ -96,19 +96,16 @@ function c
   gcc $argv.c -o $argv & eval ./$argv
 end
 
+# export PATH="/Users/dylanlarrabee/miniconda3/bin:$PATH"
+# source ~/miniconda3/etc/fish/conf.d/conda.fish
 
-### Conda working with fish
+# function freeze
+#   set os (uname -s)
+#   conda env export --no-builds > "$os-environment.yaml"
+#   pip freeze > "$os-requirements.txt"
+# end
 
-export PATH="/Users/dylanlarrabee/miniconda3/bin:$PATH"
-source ~/miniconda3/etc/fish/conf.d/conda.fish
-
-function freeze
-  set os (uname -s)
-  conda env export --no-builds > "$os-environment.yaml"
-  pip freeze > "$os-requirements.txt"
-end
-
-alias activate 'conda activate '
+# alias activate 'conda activate '
 
 ### Jupyter Notebook stuff
 
