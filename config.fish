@@ -84,6 +84,8 @@ alias deactivatenv "deactivate"
 
 ### MISC
 
+alias d "docker "
+
 # for restricting pernisions on public keys
 alias restrict "chmod 400 "
 
