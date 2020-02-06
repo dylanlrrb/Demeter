@@ -96,8 +96,8 @@ function c
   gcc $argv.c -o $argv & eval ./$argv
 end
 
-# export PATH="/Users/dylanlarrabee/miniconda3/bin:$PATH"
-# source ~/miniconda3/etc/fish/conf.d/conda.fish
+export PATH="/Users/dylanlarrabee/miniconda3/bin:$PATH"
+source ~/miniconda3/etc/fish/conf.d/conda.fish
 
 # function freeze
 #   set os (uname -s)
