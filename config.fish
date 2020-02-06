@@ -134,7 +134,7 @@ function removenv
   rm -rf ~/.virtualenv/$argv
 end
 
-alias lsenv "ls -F ~/.virtualenv/ | grep \/"
+alias lsenv "ls -F ~/.virtualenv/ | grep \/ | sed 's/\/$//'"
 
 alias deactivatenv "deactivate"
 
