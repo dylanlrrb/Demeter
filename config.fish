@@ -123,18 +123,18 @@ alias python "python3 "
 alias pip "pip3 "
 
 function createnv
-  virtualenv ~/.virtualenv/$argv
+  virtualenv ~/.virtualenvs/$argv
 end
 
 function activatenv
-  source ~/.virtualenv/$argv/bin/activate.fish
+  source ~/.virtualenvs/$argv/bin/activate.fish
 end
 
 function removenv
-  rm -rf ~/.virtualenv/$argv
+  rm -rf ~/.virtualenvs/$argv
 end
 
-alias lsenv "ls -F ~/.virtualenv/ | grep \/ | sed 's/\/$//'"
+alias lsenv "ls -F ~/.virtualenvs/ | grep \/ | sed 's/\/$//'"
 
 alias deactivatenv "deactivate"
 
