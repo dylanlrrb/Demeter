@@ -9,5 +9,4 @@ bash setup.sh
 ```
 TODO:
 
-- conditinally source miniconda based on if it is installed
 - figure out configuring secrets
