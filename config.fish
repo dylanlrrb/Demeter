@@ -130,9 +130,14 @@ function activatenv
   source ~/.virtualenv/$argv
 end
 
+function removenv
+  rm -rf ~/.virtualenv/$argv
+end
+
 alias lsenv "ls -F ~/.virtualenv/ | grep \/"
 
 alias deactivatenv "deactivate"
+
 
 ### MISC
 
