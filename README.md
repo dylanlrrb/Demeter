@@ -1,5 +1,8 @@
 # Install Packages
 
 ```console
-pip install virtualenv
+xcode-select --install
+sudo su
+pip3 install virtualenv
+exit
 ```
