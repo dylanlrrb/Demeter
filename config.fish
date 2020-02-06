@@ -127,7 +127,7 @@ function createnv
 end
 
 function activatenv
-  source ~/.virtualenv/$argv
+  source ~/.virtualenv/$argv/bin/activate.fish
 end
 
 function removenv
