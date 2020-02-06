@@ -86,6 +86,8 @@ alias deactivatenv "deactivate"
 
 alias d "docker "
 
+alias x "exit"
+
 # for restricting pernisions on public keys
 alias restrict "chmod 400 "
 
