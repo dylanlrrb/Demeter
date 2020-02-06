@@ -116,6 +116,24 @@ alias jp 'jupyter notebook'
 alias html 'jupyter nbconvert --to html '
 alias pdf 'jupyter nbconvert --to pdf '
 
+## Python stuff
+
+alias python "python3 "
+
+alias pip "pip3 "
+
+function createnv
+  virtualenv ~/.virtualenv/$argv
+end
+
+function activatenv
+  source ~/.virtualenv/$argv
+end
+
+alias lsenv "ls -F ~/.virtualenv/ | grep \/"
+
+alias deactivatenv "deactivate"
+
 ### MISC
 
 # for restricting pernisions on public keys
