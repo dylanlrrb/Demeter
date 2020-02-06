@@ -3,7 +3,9 @@
 ```console
 sudo apt -y update
 # basic packages
-sudo apt install curl ifconfig git vim nano zip less open-ssh htop -y
+sudo apt install curl ifconfig git vim nano zip less open-ssh htop python3-pip -y
+pip3 install --upgrade pip
+sudo pip3 install virtualenv
 # deps for docker
 sudo apt -y install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
 # remove docker if its there and install
