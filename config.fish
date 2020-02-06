@@ -60,6 +60,28 @@ end
 alias jp 'jupyter notebook --no-browser --port=8889'
 alias html 'jupyter nbconvert --to html '
 
+## Python stuff
+
+alias python "python3 "
+
+alias pip "pip3 "
+
+function createnv
+  virtualenv ~/.virtualenvs/$argv
+end
+
+function activatenv
+  source ~/.virtualenvs/$argv/bin/activate.fish
+end
+
+function removenv
+  rm -rf ~/.virtualenvs/$argv
+end
+
+alias lsenv "ls -F ~/.virtualenvs/ | grep \/"
+
+alias deactivatenv "deactivate"
+
 ### MISC
 
 # for restricting pernisions on public keys
