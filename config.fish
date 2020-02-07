@@ -66,11 +66,15 @@ alias python "python3 "
 
 alias pip "pip3 "
 
-# Prthon Version Install
+# Python Version Install
+# Usage:   pvi <version-number>
+# Example: pvi 3.4
 function pvi
   sudo apt-get install python$argv -y
 end
 
+# Usage:   createnv <version> <env-name>
+# Example: createnv python3.4 ai3_4
 function createnv
   virtualenv  --python=/usr/bin/$argv[1] ~/.virtualenvs/$argv[2]
 end
