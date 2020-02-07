@@ -37,7 +37,7 @@ alias lsa 'ls -a'
 alias ll 'ls -l'
 alias lla 'ls -la'
 alias D 'cd ~/Desktop'
-alias c 'clear'
+alias cl 'clear'
 ### alias screeps 'cd ~/Library/Application\ Support/Screeps/scripts/'
 
 ### SSH HELPERS
