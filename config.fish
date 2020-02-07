@@ -122,8 +122,19 @@ alias python "python3 "
 
 alias pip "pip3 "
 
+# Python Version Install
+# Usage:   pvi <version-number>
+# Example: pvi 3.6.9 (must contain micro version)
+# needs pyenv installed with brew
+function pvi
+  pyenv install python$argv -y
+end
+
+# Usage:   createnv <version> <minor-version> <env-name>
+# Example: createnv 3.6.9 3.6  ai3_4
+# need to find a better way to do this
 function createnv
-  virtualenv ~/.virtualenvs/$argv
+  virtualenv --python=/Users/$USER/.pyenv/versions/$argv[1]/bin/python$argv[2] ~/.virtualenvs/$argv[3]
 end
 
 function activatenv
