@@ -6,6 +6,10 @@ sudo apt -y update
 sudo apt install curl ifconfig git vim nano zip less open-ssh htop python3-pip -y
 pip3 install --upgrade pip
 sudo pip3 install virtualenv
+# allow the installation of other python versions
+sudo apt-get install software-properties-common -y
+sudo add-apt-repository ppa:deadsnakes/ppa -y
+sudo apt-get update
 # deps for docker
 sudo apt -y install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
 # remove docker if its there and install
