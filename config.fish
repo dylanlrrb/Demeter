@@ -66,8 +66,13 @@ alias python "python3 "
 
 alias pip "pip3 "
 
+# Prthon Version Install
+function pvi
+  sudo apt-get install python$argv -y
+end
+
 function createnv
-  virtualenv ~/.virtualenvs/$argv
+  virtualenv  --python=/usr/bin/$argv[1] ~/.virtualenvs/$argv[2]
 end
 
 function activatenv
