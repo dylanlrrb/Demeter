@@ -99,6 +99,9 @@ alias d "docker "
 
 alias x "exit"
 
+# continually display gpu stats, kinda like htop
+alias gtop "watch -n 1 nvidia-smi"
+
 # for restricting pernisions on public keys
 alias restrict "chmod 400 "
 
