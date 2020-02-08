@@ -130,11 +130,15 @@ function pvi
   pyenv install $argv
 end
 
+alias lspy "ls /Users/$USER/.pyenv/versions/"
+
 # Usage:   createnv <version> <minor-version> <env-name>
-# Example: createnv 3.6.9 3.6  ai3_4
-# need to find a better way to do this
+# Example: createnv 3.6.9  ai3_6 (must specify micro version)
 function createnv
-  virtualenv --python=/Users/$USER/.pyenv/versions/$argv[1]/bin/python$argv[2] ~/.virtualenvs/$argv[3]
+  set major (echo $argv[1] | cut -d'.' -f1)
+  set minor (echo $argv[1] | cut -d'.' -f2)
+  set version "$major.$minor"
+  virtualenv --python=/Users/$USER/.pyenv/versions/$argv[1]/bin/python$version ~/.virtualenvs/$argv[2]
 end
 
 function activatenv
