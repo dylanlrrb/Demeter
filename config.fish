@@ -127,7 +127,7 @@ alias pip "pip3 "
 # Example: pvi 3.6.9 (must contain micro version)
 # needs pyenv installed with brew
 function pvi
-  pyenv install python$argv -y
+  pyenv install $argv -y
 end
 
 # Usage:   createnv <version> <minor-version> <env-name>
