@@ -73,6 +73,8 @@ function pvi
   sudo apt-get install python$argv -y
 end
 
+alias lspy "ls /usr/bin/ | grep 'python'"
+
 # Usage:   createnv <version> <env-name>
 # Example: createnv python3.4 ai3_4
 function createnv
