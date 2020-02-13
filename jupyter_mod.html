@@ -1,0 +1,451 @@
+<style>
+  /* my styles */
+  body {
+    padding: 0;
+    display: none;
+  }
+  body.loaded {
+    display: initial;
+  }
+
+  #notebook-container {
+    box-shadow: none;
+    padding-top: 100px;
+  }
+
+  .shifted-up #notebook-container {
+    padding-top: 30px;
+  }
+
+  #notebook {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  #notebook-container.container {
+    margin-left: unset;
+    width: 100%
+  }
+
+  div.cell {
+    margin-bottom: 10px;
+  }
+
+  .input_prompt {
+    font-size: 0;
+    width: 0;
+  }
+
+  .input .input_prompt, .output_prompt, .output_area .prompt {
+    font-size: 0;
+    width: 30px;
+  }
+
+  .inner_cell .text_cell_render {
+    max-width: 1016px;
+    padding: 10px;
+  }
+
+  .input_area pre, .output_area pre {
+    max-width: 970px;
+  }
+
+  div.input_area {
+    border: 0px;
+  }
+
+  div.code_cell:before {
+    background-color: #e9e7e7;
+    width: 30px;
+    height: 100%;
+  }
+
+  div.code_cell {
+    overflow: hidden;
+    padding: 0;
+  }
+
+  .code_cell.selected {
+    box-shadow: 0px 0px 10px 3px rgba(53, 52, 52, 0.2)
+  }
+
+  .text_cell.selected {
+    box-shadow: 0px 0px 10px 3px rgba(53, 52, 52, 0.2)
+  }
+
+  .header {
+    width: 100%;
+    /* B */
+    height: 70px;
+    position: fixed;
+    top: 0;
+    background-color: white;
+    z-index: 100;
+    border-bottom: 1px solid #cfcfcf;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .header.collapsed {
+    height: 0;
+  }
+
+  .title-info {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .header .title {
+    font-size: 21.5px;
+  }
+
+  .header .authors {
+    font-size: 15px;
+    color: #5a5959;
+  }
+
+  .header .updated {
+    align-self: flex-start;
+    font-size: 14px;
+    color: #5a5959;
+    margin: 5px 15px 5px 0;
+  }
+
+  .drawer {
+    /* A */
+    min-width: 330px;
+    background-color: white;
+    z-index: 100;
+    border-right: 1px solid #cfcfcf;
+    overflow: hidden;
+  }
+
+  .options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .drawer.collapsed {
+    /* A */
+    min-width: 35px
+  }
+
+  .table-contents {
+    position: fixed;
+  }
+
+  .collapsed .table-contents ul {
+    display: none;
+  }
+
+  .collapsed .table-contents {
+    /* A */
+    width: 35px;
+  }
+
+
+  .drawer-toggle {
+    /* A */
+    width: 330px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-size: 16px;
+    padding-left: 50px;
+  }
+
+  .collapsed .drawer-toggle {
+    /* A */
+    width: 35px;
+    justify-content: center;
+    font-size: 0;
+    padding: 0;
+  }
+
+  .drawer-toggle .list-icon {
+    height: 0px;
+    fill: #CC6B06;
+  }
+
+  .drawer-toggle .close-icon {
+    height: 30px;
+    margin-right: 10px;
+    transform: rotate(-90deg);
+    border-radius: 50%;
+  }
+
+  .drawer-buttons:hover {
+    background-color: lightgray;
+    cursor: pointer;
+  }
+
+  .collapsed .drawer-toggle .list-icon {
+    height: 20px;
+  }
+
+  .collapsed .drawer-toggle .close-icon {
+    height: 0px;
+    margin: 0;
+  }
+
+  .options-drawer {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: white;
+    z-index: 1;
+    border-bottom: 1px solid #cfcfcf;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .header-spacer {
+    /* B */
+    height: 70px;
+  }
+
+  .header-spacer.collapsed {
+    height: 0;
+  }
+
+  .options-drawer .options span {
+    margin: 10px;
+    line-height: 30px;
+  }
+  
+  .drawer-spacer {
+    display: inline-block;
+    /* A */
+    width: 330px;  
+    margin: 0;
+    height: 10px;
+  }
+
+  .drawer-spacer.collapsed {
+    width: 35px;
+  }
+
+  .options-drawer .title-hide-icon {
+    height: 30px;
+    margin-right: 15px;
+  }
+
+  .title-hide-icon.toggled {
+    transform: rotate(180deg);
+  }
+
+  .heading-list {
+    height: 100vh;
+    overflow-y: scroll;
+    max-width: 300px;
+  }
+
+  .heading-list li {
+    list-style-type: none;
+    padding: 6px 0 6px 10px;
+  }
+
+  .heading-list a {
+    text-decoration: none;
+  }
+
+  .table-item.selected {
+    border-left: 1px solid black;
+    font-weight: bold;
+    color: darkblue;
+    padding-left: 9px;
+  }
+
+  .fake-target {
+    position: absolute;
+    top: -110px
+  }
+
+  .shifted-up .fake-target {
+    top: -40px;
+  }
+
+  /* css utils */
+  .hidden {
+    display: none;
+  }
+  
+</style>
+<script>
+  // grab all cells
+  const allCells = document.querySelectorAll('.cell')
+  // add click handlers
+  allCells.forEach(cell => cell.addEventListener('click', () => {
+    allCells.forEach(el => el.classList.remove('selected'));
+    cell.classList.toggle('selected')
+  }));
+
+  let title = document.querySelector('title').innerHTML;
+  let metadataCell;
+  let authors;
+  let updated;
+  
+  // grab metadata cell
+  metadataCell = [...document.querySelectorAll('.c1')].filter(el => el.innerHTML === "#METADATA");
+  if (metadataCell[0]) {
+    metadataCell = metadataCell[0].parentElement;
+    // add hidden class to metadata cell
+    let metadataCellContainer = metadataCell;
+    while (metadataCellContainer !== document) {
+      metadataCellContainer = metadataCellContainer.parentElement;
+      console.log(metadataCellContainer);
+      if (metadataCellContainer.classList.contains('cell')) {
+        metadataCellContainer.classList.add('hidden');
+        break;
+      }
+    }
+    
+    // extract metadata
+    let titleTemp = [...metadataCell.querySelectorAll('.c1')].filter(el => el.innerHTML.includes('title'))
+    if (titleTemp[0]) {
+      titleTemp = titleTemp[0].innerHTML.split("=")
+      if (titleTemp.length >= 2) {
+        title = titleTemp[1];
+        document.querySelector('title').innerHTML = title;
+      }
+    }
+    
+    let authorsTemp = [...metadataCell.querySelectorAll('.c1')].filter(el => el.innerHTML.includes('authors'))
+    if (authorsTemp[0]) {
+      authorsTemp = authorsTemp[0].innerHTML.split("=");
+      if (authorsTemp.length >= 2) {
+        authorsTemp = authorsTemp[1];
+        authors = authorsTemp.split(',').map(author => author.split(':'));
+        // console.log(authors) // TODO: if its an email make it a "mailto:", add email all authors button link dont make it a link if empty string, only hilight on hover
+      }
+    }  
+
+    updatedTemp = [...metadataCell.querySelectorAll('.c1')].filter(el => el.innerHTML.includes('updated'));
+    if (updatedTemp[0]) {
+      updatedTemp = updatedTemp[0].innerHTML.split("=");
+      if (updatedTemp.length >= 2) {
+        updated = updatedTemp[1];
+      }
+    }
+  }
+  
+  const header = document.createElement('DIV');
+  header.classList.add('header');
+  header.innerHTML = `
+    <div style="height:inherit;display:flex;align-items:center">
+      <img style="height:80%;margin:0 20px 0 20px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Jupyter_logo.svg/883px-Jupyter_logo.svg.png">
+      <div class="title-info">
+        <p class="title">${title}</p>
+        <p class="authors">${authors ? `Authors: ${authors.reduce((acc, author) => `${acc }, ${author[0]}`, '')}` : ''}</p>
+      </div>
+    </div>
+    <div class="updated">${updated ? `Updated: ${updated}` : ''}</div>`
+  document.body.appendChild(header);
+
+  const nav = document.createElement('DIV');
+  nav.classList.add('drawer');
+  nav.innerHTML = `
+    <div class="table-contents">
+      <div class="header-spacer"></div>
+      <div class="drawer-toggle">
+        <strong>Table of Contents</strong>
+        <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope drawer-buttons list-icon" style="display: block;"><g class="style-scope iron-icon"><path d="M4 10.5c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5zm0-6c-.83 0-1.5.67-1.5 1.5S3.17 7.5 4 7.5 5.5 6.83 5.5 6 4.83 4.5 4 4.5zm0 12c-.83 0-1.5.68-1.5 1.5s.68 1.5 1.5 1.5 1.5-.68 1.5-1.5-.67-1.5-1.5-1.5zM7 19h14v-2H7v2zm0-6h14v-2H7v2zm0-8v2h14V5H7z" class="style-scope iron-icon"></path></g></svg>
+        <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope drawer-buttons close-icon" style="display: block;"><g class="style-scope iron-icon"><path d="M12 8l-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z" class="style-scope iron-icon"></path></g></svg>
+      </div>
+      <ul class="heading-list">
+      </ul>
+    </div>`
+  document.querySelector('#notebook').appendChild(nav);
+
+  const options = document.createElement('DIV');
+  options.classList.add('options-drawer');
+  options.innerHTML = `
+    <div class="options">
+      <div>
+        <div class="drawer-spacer"></div>
+      </div>
+      <div style="height: 30px;">
+        <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope drawer-buttons title-hide-icon" style="display: inline-block;"><g class="style-scope iron-icon"><path d="M12 8l-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z" class="style-scope iron-icon"></path></g></svg>
+      </div>
+    </div>
+    <div class="header-spacer"></div>`
+  document.body.appendChild(options);
+
+  const headingTags = [...document.querySelectorAll('h1, h2, h3, h4, h5, h6')]
+  headingList = document.querySelector('.heading-list');
+  const contents = headingTags.reduce((acc, {tagName, innerText, firstElementChild}) => {
+    let text;
+    let href;
+    let margin;
+    switch(tagName) {
+      case "H1":
+        href = firstElementChild.href;
+        margin = 0;
+        break;
+      case "H2":
+        href = firstElementChild.href;
+        margin = 12;
+        break;
+      case "H3":
+        href = firstElementChild.href;
+        margin = 24;
+        break;
+      case "H4":
+        href = firstElementChild.href;
+        margin = 36;
+        break;
+      case "H5":
+        href = firstElementChild.href;
+        margin = 48;
+        break;
+      case "H6":
+        href = firstElementChild.href;
+        margin = 60;
+        break;
+      default:
+        return acc;
+    }
+    return `${acc}<a href="${href}"><li class="table-item" style="margin-left: ${margin}px">${innerText.replace('¶', '')}</li></a>`;
+  }, '');
+  
+  headingList.innerHTML = `${contents}${'<br>'.repeat(10)}`;
+
+  headingTags.forEach(el => {
+    const fakeTarget = document.createElement('DIV');
+    fakeTarget.classList.add('fake-target');
+    fakeTarget.id = el.id;
+    el.id = '';
+    el.appendChild(fakeTarget);
+  });
+
+  const drawerSpacer = document.querySelector('.drawer-spacer');
+  const drawerToggle = document.querySelector('.drawer-toggle').addEventListener('click', () => {
+    nav.classList.toggle('collapsed');
+    drawerSpacer.classList.toggle('collapsed');
+  });
+
+  const headerSpacers = [...document.querySelectorAll('.header-spacer')];
+  const titleHide = document.querySelector('.title-hide-icon')
+  titleHide.addEventListener('click', () => {
+    titleHide.classList.toggle('toggled');
+    header.classList.toggle('collapsed');
+    document.body.classList.toggle('shifted-up')
+    headerSpacers.forEach(el => el.classList.toggle('collapsed'));
+  })
+
+  const tableItems = [...document.querySelectorAll('.table-item')]
+  const memo = new Map()
+  tableItems.forEach(item => item.addEventListener('click', () => {
+    tableItems.forEach(el => el.classList.remove('selected'));
+    item.classList.toggle('selected')
+    document.querySelector(`#${item.parentElement.href.split("#")[1]}`).click();
+  }));
+
+  document.body.classList.add('loaded');
+
+</script>
