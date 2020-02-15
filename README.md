@@ -31,4 +31,11 @@ curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add -
 curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list | sudo tee /etc/apt/sources.list.d/nvidia-docker.list
 sudo apt-get update && sudo apt-get install -y nvidia-container-toolkit
 sudo systemctl restart docker
+# (OPTIONAL )disable news on login: 
+# 1. edit /etc/default/motd-news and change
+# ENABLED=1 to ENABLED=0
+# 2. edit /etc/update-motd.d/80-livepatch and add  
+# exit 0
+# after the "#!/bin/sh.
+# 3. edit /etc/update-motd.d/10-help-text and remove the printf lines or put exit 0 before them.
 ```
