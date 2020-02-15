@@ -10,6 +10,7 @@ sudo pip3 install virtualenv
 sudo apt-get install software-properties-common -y
 sudo add-apt-repository ppa:deadsnakes/ppa -y
 sudo apt-get update
+# (install boto3 and aws credentials for programatic script access to AWS)
 # deps for docker
 sudo apt -y install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
 # remove docker if its there and install
@@ -31,7 +32,7 @@ curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add -
 curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list | sudo tee /etc/apt/sources.list.d/nvidia-docker.list
 sudo apt-get update && sudo apt-get install -y nvidia-container-toolkit
 sudo systemctl restart docker
-# (OPTIONAL )disable news on login: 
+# (OPTIONAL) disable news on login: 
 # 1. edit /etc/default/motd-news and change
 # ENABLED=1 to ENABLED=0
 # 2. edit /etc/update-motd.d/80-livepatch and add  
