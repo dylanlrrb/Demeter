@@ -102,6 +102,9 @@ alias x "exit"
 # continually display gpu stats, kinda like htop
 alias gtop "watch -n 1 nvidia-smi"
 
+# like top but for showing network activity/bandwidth
+alias iftop "sudo iftop"
+
 # for restricting pernisions on public keys
 alias restrict "chmod 400 "
 
