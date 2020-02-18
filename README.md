@@ -3,7 +3,7 @@
 ```console
 sudo apt -y update
 # basic packages
-sudo apt install curl ifconfig git vim nano zip less open-ssh htop python3-pip -y
+sudo apt install curl ifconfig iftop git vim nano zip less open-ssh htop python3-pip -y
 pip3 install --upgrade pip
 sudo pip3 install virtualenv
 # allow the installation of other python versions
