@@ -10,11 +10,6 @@ sudo pip3 install virtualenv
 sudo apt-get install software-properties-common -y
 sudo add-apt-repository ppa:deadsnakes/ppa -y
 sudo apt-get update
-# Install and use fish
-sudo apt-add-repository ppa:fish-shell/release-3
-sudo apt-get update
-sudo apt-get install fish
-chsh -s /usr/local/bin/fish
 # (add aws credentials for programatic script access to AWS)
 # deps for docker
 sudo apt -y install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
