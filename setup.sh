@@ -17,3 +17,4 @@ chsh -s `which fish`
 curl -L https://get.oh-my.fish | fish
 cd ~
 echo "Please restart your shell"
+exit
