@@ -3,7 +3,7 @@
 ```console
 bash install.sh
 
-# (add aws credentials for programatic script access to AWS)
+# (add aws credentials for programatic access to AWS)
 
 # (OPTIONAL) disable news on login: 
 # 1. edit /etc/default/motd-news and change
