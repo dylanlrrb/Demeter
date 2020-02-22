@@ -1,10 +1,10 @@
 # Install packages
 
 ```console
+fishsticks
 bash install.sh
 
-# (add aws credentials for programatic access to AWS)
-
+# Add aws credentials for programatic access to AWS
 # (OPTIONAL) disable news on login: 
 # 1. edit /etc/default/motd-news and change
 # ENABLED=1 to ENABLED=0
