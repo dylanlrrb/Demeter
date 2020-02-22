@@ -97,25 +97,9 @@ function c
   gcc $argv.c -o $argv & eval ./$argv
 end
 
-# export PATH="/Users/dylanlarrabee/miniconda3/bin:$PATH"
-# source ~/miniconda3/etc/fish/conf.d/conda.fish
-
-# function freeze
-#   set os (uname -s)
-#   conda env export --no-builds > "$os-environment.yaml"
-#   pip freeze > "$os-requirements.txt"
-# end
-
-# alias activate 'conda activate '
-
 ### Jupyter Notebook stuff
 
-# Tool used for converting to PDF
-export PATH="/Library/TeX/Distributions/.DefaultTeX/Contents/Programs/texbin:$PATH"
-
 alias jp 'jupyter notebook --no-browser'
-alias html 'jupyter nbconvert --to html '
-alias pdf 'jupyter nbconvert --to pdf '
 
 ## Python stuff
 
@@ -157,22 +141,14 @@ alias deactivatenv "deactivate"
 
 ### MISC
 
-# for restricting pernisions on public keys
+# for restricting pernisions on directories and files
+# (only the owner can read)
 alias restrict "chmod 400 "
 
-# for opening up permissions on .sh scripts
+# for opening up permissions on .sh scripts so they can be executed
 alias permit "chmod +x "
 
 ### SET NODE VERSION ON START
-
-nvm use v8.11.1
-
-### SET UP SECRETS ON START
-### not really sure how to use rn
-### . ~/.config/fish/secrets.fish
-
-### ADD GITHUB KEY PAIR
-
-### ssh-add -K ~/.ssh/wwkp
+# nvm use v8.11.1
 
 updatefish
