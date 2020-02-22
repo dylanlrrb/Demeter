@@ -7,7 +7,3 @@ git clone https://github.com/dylanlrrb/fishsticks.git
 cd fishsticks
 bash setup.sh
 ```
-
-TODO:
-
-- figure out configuring secrets
