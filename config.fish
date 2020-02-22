@@ -46,7 +46,7 @@ function ip
   ifconfig en0 | sed -En 's/127.0.0.1//;s/.*inet (addr:)?(([0-9]*\.){3}[0-9]*).*/\2/p'
 end
 
-
+## AWS Volume helper
 # function mount
 #   cd ~
 #   lsblk
@@ -59,7 +59,6 @@ end
 
 
 alias jp 'jupyter notebook --no-browser --port=8889'
-alias html 'jupyter nbconvert --to html '
 
 ## Python stuff
 
@@ -107,9 +106,10 @@ alias gtop "watch -n 1 nvidia-smi"
 alias iftop "sudo iftop"
 
 # for restricting pernisions on public keys
+# (only the owner can read)
 alias restrict "chmod 400 "
 
-# for opening up permissions on .sh scripts
+# for opening up permissions on .sh scripts so they can be executed
 alias permit "chmod +x "
 
 # turn off the desktop in one minute and exit
