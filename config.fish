@@ -30,6 +30,7 @@ alias hist "log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short"
 alias clean 'git clean -i'
 alias code 'open -a Visual\ Studio\ Code'
 alias profile 'code ~/.config/fish/config.fish'
+alias fishsticks 'cd ~/.config/fish/fishsticks'
 
 ### DIRECTORY ALIASES
 
