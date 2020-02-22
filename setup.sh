@@ -5,6 +5,7 @@ if [ "$os" == "darwin" ]
 then
     brew install fish
 else
+    sudo apt-get update
     sudo apt-get install fish -y
 fi
 cd ~/.config/fish
