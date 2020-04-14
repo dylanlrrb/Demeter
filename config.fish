@@ -42,6 +42,8 @@ alias cl 'clear'
 
 ### RANDOM HELPERS
 
+alias profile 'less ~/.config/fish/config.fish'
+
 function ip
   ifconfig en0 | sed -En 's/127.0.0.1//;s/.*inet (addr:)?(([0-9]*\.){3}[0-9]*).*/\2/p'
 end
