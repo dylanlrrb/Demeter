@@ -94,7 +94,7 @@ end
 ### C Helpers
 
 function c
-  gcc $argv.c -o $argv & eval ./$argv
+  gcc $argv.c -o $argv
 end
 
 ### Jupyter Notebook stuff
