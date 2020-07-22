@@ -52,6 +52,10 @@ function cr10
   ssh -i ~/.ssh/cr10_rsa pi@dylancr10.ddns.net
 end
 
+function cr10_local
+  ssh -i ~/.ssh/cr10_rsa pi@192.168.0.15
+end
+
 function micro
   ssh -i ~/.ssh/aws-dylan-r-lrrb.pem ec2-user@ec2-34-210-224-29.us-west-2.compute.amazonaws.com
 end
