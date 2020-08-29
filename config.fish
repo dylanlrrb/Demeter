@@ -48,16 +48,12 @@ function ai
   ssh -i ~/.ssh/aws-dylan-r-lrrb.pem -L 8888:localhost:8888 ubuntu@$argv
 end
 
-function cr10
-  ssh -i ~/.ssh/cr10_rsa pi@dylancr10.ddns.net
-end
-
 function cr10_local
   ssh -i ~/.ssh/cr10_rsa pi@192.168.0.15
 end
 
 function homebase
-  ssh -i ~/.ssh/homebase_rsa pi@homebasenet.ddns.net
+  ssh -i ~/.ssh/homebase_rsa pi@192.168.0.20
 end
 
 function micro
