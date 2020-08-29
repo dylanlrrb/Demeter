@@ -48,7 +48,7 @@ function ai
   ssh -i ~/.ssh/aws-dylan-r-lrrb.pem -L 8888:localhost:8888 ubuntu@$argv
 end
 
-function cr10_local
+function cr10
   ssh -i ~/.ssh/cr10_rsa pi@192.168.0.15
 end
 
