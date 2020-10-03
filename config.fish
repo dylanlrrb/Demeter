@@ -53,7 +53,7 @@ function cr10
 end
 
 function homebase
-  ssh -i ~/.ssh/homebase_rsa pi@192.168.0.20
+  ssh -i ~/.ssh/homebase_rsa pi@192.168.0.13
 end
 
 function micro
