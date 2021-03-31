@@ -4,7 +4,8 @@ sudo apt -y update
 # basic packages
 sudo apt install curl ifconfig iftop git vim nano zip unzip less open-ssh htop python3-pip -y
 pip3 install --upgrade pip -y
-sudo pip3 install virtualenv -y
+sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev python-openssl
+curl https://pyenv.run | bash
 # allow the installation of other python versions
 sudo apt-get install software-properties-common -y
 sudo add-apt-repository ppa:deadsnakes/ppa -y
