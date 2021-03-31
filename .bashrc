@@ -123,10 +123,10 @@ alias deactivate="pyenv deactivate"
 
 # for restricting pernisions on directories and files
 # (only the owner can read)
-alias restrict "chmod 400 "
+alias restrict="chmod 400 "
 
 # for opening up permissions on .sh scripts so they can be executed
-alias permit "chmod +x "
+alias permit="chmod +x "
 
 
 updateprofile
