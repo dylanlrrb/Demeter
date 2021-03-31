@@ -46,7 +46,7 @@ alias cl='clear'
 
 # Usage: `ai <address of instance>` 
 function ai() { 
-  ssh -i ~/.ssh/aws-dylan-r-lrrb.pem -L 8888:localhost:8888 ubuntu@$argv
+  ssh -i ~/.ssh/aws-dylan-r-lrrb.pem -L 8888:localhost:8888 ubuntu@$1
 }
 
 alias cr10='ssh -i ~/.ssh/cr10_rsa pi@192.168.0.15'
@@ -63,18 +63,18 @@ alias ip="ifconfig en0 | sed -En 's/127.0.0.1//;s/.*inet (addr:)?(([0-9]*\.){3}[
 
 ### ASM Helpers
 function compile() {
-  nasm -f elf64 $argv.asm -o $argv.o & ld $argv.o -o $argv
+  nasm -f elf64 $argv.asm -o $argv.o & ld $argv.o -o $1
 }
 
 # disassemble
 function dis() {
-  objdump -d $argv
+  objdump -d $1
 }
 
 ### C Helpers
 
 function c() {
-  gcc $argv.c -o $argv
+  gcc $argv.c -o $1
 }
 
 ### Jupyter Notebook stuff
@@ -98,7 +98,7 @@ eval "$(pyenv virtualenv-init -)"
 # needs pyenv installed with brew
 # pvi <python_version>
 function pvi() {
-  pyenv install $argv
+  pyenv install $1
 }
 
 # list installed python versions
@@ -111,7 +111,7 @@ alias createnv='pyenv virtualenv '
 alias activatenv='pyenv local '
 
 function removenv() {
-  rm -rf ~/.virtualenvs/$argv
+  rm -rf ~/.virtualenvs/$1
 }
 
 alias lsenv="ls -F ~/.virtualenvs/ | grep \/ | tr -d '/,'"
