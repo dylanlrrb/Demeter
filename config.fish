@@ -64,9 +64,12 @@ alias jp 'jupyter notebook --no-browser --port=8889'
 
 ## Python stuff
 
-# alias python "python3 "
+alias python "python3 "
+alias pip "pip3 "
 
-# alias pip "pip3 "
+#Virtualenvwrapper settings:
+
+eval (python -m virtualfish)
 
 # Python Version Install
 # Usage:   pvi <version-number>
