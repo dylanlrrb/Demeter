@@ -64,9 +64,9 @@ alias jp 'jupyter notebook --no-browser --port=8889'
 
 ## Python stuff
 
-alias python "python3 "
+# alias python "python3 "
 
-alias pip "pip3 "
+# alias pip "pip3 "
 
 # Python Version Install
 # Usage:   pvi <version-number>
@@ -80,18 +80,18 @@ alias lspy "ls /usr/bin/ | grep 'python'"
 # Usage:   createnv <version> <env-name>
 # Example: createnv python3.4 ai3_4
 function createnv
-  virtualenv  --python=/usr/bin/$argv[1] ~/.virtualenvs/$argv[2]
+  virtualenv  --python=/usr/bin/$argv[1] ~/.virtualenv/$argv[2]
 end
 
 function activatenv
-  source ~/.virtualenvs/$argv/bin/activate.fish
+  source ~/.virtualenv/$argv/bin/activate.fish
 end
 
 function removenv
-  rm -rf ~/.virtualenvs/$argv
+  rm -rf ~/.virtualenv/$argv
 end
 
-alias lsenv "ls -F ~/.virtualenvs/ | grep \/ | tr -d '/,'"
+alias lsenv "ls -F ~/.virtualenv/ | grep \/ | tr -d '/,'"
 
 alias deactivatenv "deactivate"
 
