@@ -3,8 +3,8 @@
 ```console
 xcode-select --install
 pip3 install --upgrade pip
-brew install pyenv
+brew install openssl readline sqlite3 xz zlib
+curl https://pyenv.run | bash
 sudo su
-pip3 install virtualenv
 exit
 ```
