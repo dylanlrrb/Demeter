@@ -46,7 +46,7 @@ alias cl='clear'
 
 # Usage: `ai <address of instance>` 
 function ai() { 
-  ssh -i ~/.ssh/aws-dylan-r-lrrb.pem -L 8888:localhost:8888 ubuntu@$argv
+  ssh -i ~/.ssh/aws-dylan-r-lrrb.pem -L 8888:localhost:8888 ubuntu@$1
 }
 
 alias cr10='ssh -i ~/.ssh/cr10_rsa pi@192.168.0.15'
@@ -91,7 +91,7 @@ eval "$(pyenv virtualenv-init -)"
 # needs pyenv installed with brew
 # pvi <python_version>
 function pvi() {
-  pyenv install $argv
+  pyenv install $1
 }
 
 # list installed python versions
@@ -104,7 +104,7 @@ alias createnv='pyenv virtualenv '
 alias activatenv='pyenv local '
 
 function removenv() {
-  rm -rf ~/.virtualenvs/$argv
+  rm -rf ~/.virtualenvs/$1
 }
 
 alias lsenv="ls -F ~/.virtualenvs/ | grep \/ | tr -d '/,'"
