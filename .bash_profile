@@ -107,7 +107,8 @@ function removenv() {
   rm -rf ~/.virtualenvs/$1
 }
 
-alias lsenv="ls -F ~/.virtualenvs/ | grep \/ | tr -d '/,'"
+# alias lsenv="ls -F ~/.virtualenvs/ | grep \/ | tr -d '/,'"
+alias lsenv="pyenv virtualenvs"
 
 alias deactivate="pyenv deactivate"
 
