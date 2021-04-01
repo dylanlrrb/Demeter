@@ -30,7 +30,7 @@ alias hsit='hist '
 alias h='hist -5'
 alias clean='git clean -i'
 alias code='open -a Visual\ Studio\ Code'
-alias profile='code ~/.bashrc'
+alias profile='code ~/.bash_profile'
 alias fishsticks='cd ~/fishsticks'
 
 ### DIRECTORY ALIASES
