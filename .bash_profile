@@ -94,8 +94,6 @@ export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
-export PYENV_VIRTUALENV_DISABLE_PROMPT=0
-
 # Python Version Install
 # needs pyenv installed with brew
 # pvi <python_version>
@@ -104,6 +102,7 @@ function pvi() {
 }
 
 # list installed python versions
+# there will be an astrisk next ti the currently active env
 alias lspy="pyenv versions"
 
 # createnv <python_version> <environment_name>
@@ -113,12 +112,12 @@ alias createnv='pyenv virtualenv '
 alias activatenv='pyenv local '
 
 function removenv() {
-  rm -rf ~/.virtualenvs/$1
+  rm -rf ~/.pyenv/versions/$1
 }
 
 alias lsenv="pyenv virtualenvs"
 
-alias deactivate="pyenv deactivate"
+alias deactivatenv="pyenv local system"
 
 
 ### MISC
