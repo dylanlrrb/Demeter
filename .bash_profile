@@ -94,7 +94,7 @@ export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
-export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+export PYENV_VIRTUALENV_DISABLE_PROMPT=0
 
 # Python Version Install
 # needs pyenv installed with brew
@@ -116,7 +116,7 @@ function removenv() {
   rm -rf ~/.virtualenvs/$1
 }
 
-alias lsenv="ls -F ~/.virtualenvs/ | grep \/ | tr -d '/,'"
+alias lsenv="pyenv virtualenvs"
 
 alias deactivate="pyenv deactivate"
 
