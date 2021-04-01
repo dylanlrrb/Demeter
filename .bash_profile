@@ -109,7 +109,7 @@ alias lspy="pyenv versions"
 alias createnv='pyenv virtualenv '
 
 # activatenv <environment_name>
-alias activatenv='pyenv local '
+alias activate='pyenv local '
 
 function removenv() {
   rm -rf ~/.pyenv/versions/$1
@@ -117,7 +117,7 @@ function removenv() {
 
 alias lsenv="pyenv virtualenvs"
 
-alias deactivatenv="pyenv local system"
+alias deactivate="pyenv local system"
 
 
 ### MISC
