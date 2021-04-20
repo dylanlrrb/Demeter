@@ -117,7 +117,10 @@ alias deactivate="pyenv local system"
 git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
-PS1="\[\e[36m\]\$(python -V)\[\e[m\] \W \[\e[33m\]\$(git_branch)\[\e[m\]$ "
+os() {
+ uname -s
+}
+PS1="\[\e[36m\]\$(os) $(python -V)\[\e[m\] \W \[\e[33m\]\$(git_branch)\[\e[m\]$ "
 
 alias d="docker "
 
