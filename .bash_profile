@@ -61,6 +61,8 @@ alias x='ssh -i ~/.ssh/desktop_rsa  dylan@192.168.0.19'
 
 alias ip="ifconfig en0 | sed -En 's/127.0.0.1//;s/.*inet (addr:)?(([0-9]*\.){3}[0-9]*).*/\2/p'"
 
+alias s="npx http-server"
+
 ### ASM Helpers
 function compile() {
   nasm -f elf64 $argv.asm -o $argv.o & ld $argv.o -o $1
