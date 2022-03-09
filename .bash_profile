@@ -137,6 +137,7 @@ alias iftop="sudo iftop"
 # for restricting pernisions on public keys
 # (only the owner can read)
 alias restrict="chmod 400 "
+alias release="sudo chown -R dylan " # <directory> change the premissions for an entire directory
 
 # for opening up permissions on .sh scripts so they can be executed
 alias permit="chmod +x "
