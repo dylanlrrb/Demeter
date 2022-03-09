@@ -1,5 +1,6 @@
 function updateprofile() {
   cd ~/dotfiles
+  git checkout .
   git checkout darwin
   git pull origin darwin
   cp .bash_profile ..
@@ -31,7 +32,6 @@ alias h='hist -5'
 alias clean='git clean -i'
 alias code='open -a Visual\ Studio\ Code'
 alias profile='code ~/.bash_profile'
-alias fishsticks='cd ~/fishsticks'
 
 ### DIRECTORY ALIASES
 
