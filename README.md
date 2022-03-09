@@ -12,7 +12,7 @@ git clone https://github.com/dylanlrrb/dotfiles.git
 ```console
 cd ~/dotfiles
 git checkout linux
-source .bash_profile
+cp .bash_profile ..
 ```
 
 ## Darwin:
@@ -20,5 +20,5 @@ source .bash_profile
 ```console
 cd ~/dotfiles
 git checkout darwin
-source .bash_profile
+cp .bash_profile ..
 ```
