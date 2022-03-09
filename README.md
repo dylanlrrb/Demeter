@@ -1,4 +1,4 @@
-# Fishsticks
+# dotfiles
 
 script to set up my shell config on linux and darwin os 
 
