@@ -2,7 +2,7 @@ function updateprofile() {
   cd ~/dotfiles
   git checkout linux
   git pull origin linux
-  cp .bash_profile ..
+  source .bash_profile
   cd ~
 }
 
