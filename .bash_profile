@@ -1,5 +1,5 @@
 function updateprofile() {
-  cd ~/fishsticks
+  cd ~/dotfiles
   git checkout darwin
   git pull origin darwin
   cp .bash_profile ..
@@ -131,6 +131,8 @@ os() {
  uname -s
 }
 PS1="\[\e[36m\]\$(os) $(python -V)\[\e[m\] \W \[\e[33m\]\$(git_branch)\[\e[m\]$ "
+
+alias s="python -m http.server 8080"
 
 # for restricting pernisions on directories and files
 # (only the owner can read)
