@@ -2,7 +2,7 @@ function updateprofile() {
   cd ~/dotfiles
   git checkout darwin
   git pull origin darwin
-  cp .bash_profile ..
+  source .bash_profile
   cd ~
 }
 
