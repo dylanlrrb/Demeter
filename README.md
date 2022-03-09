@@ -1,7 +1,7 @@
 # Install packages
 
 ```console
-fishsticks
+dotfiles
 bash install.sh
 
 # Add aws credentials for programatic access to AWS
