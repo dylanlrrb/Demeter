@@ -1,5 +1,5 @@
 function updateprofile() {
-  cd ~/fishsticks
+  cd ~/dotfiles
   git checkout linux
   git pull origin linux
   cp .bash_profile ..
@@ -61,7 +61,7 @@ alias x='ssh -i ~/.ssh/desktop_rsa  dylan@192.168.0.19'
 
 alias ip="ifconfig en0 | sed -En 's/127.0.0.1//;s/.*inet (addr:)?(([0-9]*\.){3}[0-9]*).*/\2/p'"
 
-alias s="npx http-server"
+alias s="python -m http.server 8080"
 
 ## AWS Volume helper
 # function mount
