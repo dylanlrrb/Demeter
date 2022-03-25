@@ -40,6 +40,7 @@ alias ll='ls -l'
 alias lla='ls -la'
 alias D='cd ~/Desktop'
 alias cl='clear'
+alias count_in_dirs='du -a | cut -d/ -f2 | sort | uniq -c'
 ### alias screeps 'cd ~/Library/Application\ Support/Screeps/scripts/'
 
 ### SSH HELPERS
