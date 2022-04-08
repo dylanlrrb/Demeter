@@ -56,7 +56,8 @@ alias homebase='ssh -i ~/.ssh/homebase_rsa pi@192.168.0.20'
 
 alias micro='ssh -i ~/.ssh/aws-dylan-r-lrrb.pem ec2-user@ec2-34-210-224-29.us-west-2.compute.amazonaws.com'
 
-alias x='ssh -i ~/.ssh/desktop_rsa  dylan@192.168.0.19'
+# alias x='ssh -i ~/.ssh/desktop_rsa  dylan@192.168.0.19'
+alias x='ssh -i ~/.ssh/desktop_rsa  dylan@homebasenet.ddns.net'
 
 ### RANDOM HELPERS
 
