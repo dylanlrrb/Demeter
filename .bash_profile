@@ -81,6 +81,14 @@ function c() {
   gcc $argv.c -o $1
 }
 
+### Docker stuff
+alias d="docker "
+# docker context create pc-context --docker "host=ssh://dylan@homebasenet.ddns.net"
+# docker context use pc-context
+# need to run `ssh-add ~/.ssh/desktop_rsa`
+# and needs an appropriate ~/.ssh/config
+# or you will get a permission denied error
+
 ### Jupyter Notebook stuff
 
 alias jp='jupyter notebook --no-browser'
