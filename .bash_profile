@@ -89,6 +89,7 @@ alias d="docker "
 # need to run `ssh-add ~/.ssh/desktop_rsa`
 # and needs an appropriate ~/.ssh/config
 # or you will get a permission denied error
+alias sad="ssh-add ~/.ssh/desktop_rsa"
 
 ### Jupyter Notebook stuff
 
