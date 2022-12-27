@@ -14,3 +14,10 @@ bash install.sh
 # 3. edit /etc/update-motd.d/10-help-text and remove the printf lines or put exit 0 before them.
 
 ```
+
+
+Having isues with nvidia drivers? Try:
+```
+Run sudo apt purge nvidia* libnvidia*.
+Then sudo apt install nvidia-driver-470
+```
