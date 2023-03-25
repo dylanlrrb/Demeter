@@ -21,3 +21,6 @@ Having isues with nvidia drivers? Try:
 Run sudo apt purge nvidia* libnvidia*.
 Then sudo apt install nvidia-driver-470
 ```
+
+VPN instuctions that worked for me:
+https://emersonveenstra.net/blog/access-local-network-with-wireguard/
