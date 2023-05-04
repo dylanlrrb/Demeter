@@ -19,7 +19,7 @@ bash install.sh
 Having isues with nvidia drivers? Try:
 ```
 Run sudo apt purge nvidia* libnvidia*.
-Then sudo apt install nvidia-driver-470
+Then sudo apt install nvidia-driver-515
 ```
 
 VPN instuctions that worked for me:
