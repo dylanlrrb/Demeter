@@ -132,7 +132,10 @@ os() {
 PS1="\[\e[36m\]\$(os) $(python -V)\[\e[m\] \W \[\e[33m\]\$(git_branch)\[\e[m\]$ "
 
 alias d="docker "
-alias dwd="cd ../tf/notebooks"
+alias dwd="cd ~/../tf/notebooks"
+alias start="dwd && bash run_container.sh"
+alias build="dwd && bash build_image.sh"
+alias stop="d stop dylanlrrbio"
 
 alias x="exit"
 
