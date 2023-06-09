@@ -78,6 +78,11 @@ alias s="python -m http.server 8080"
 
 alias jp='jupyter notebook --no-browser'
 
+### Hugging Face token stuff
+
+alias hfread='huggingface-cli login --token $HF_READ'
+alias hfwrite='huggingface-cli login --token $HF_WRITE'
+
 ## Python stuff
 
 alias python="python3 "
