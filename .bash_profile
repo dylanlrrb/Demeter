@@ -31,8 +31,7 @@ alias hist="log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short"
 alias hsit='hist '
 alias h='hist -5'
 alias clean='git clean -i'
-alias code='open -a Visual\ Studio\ Code'
-alias profile='code ~/.bash_profile'
+alias profile='nano ~/.bash_profile'
 
 ### DIRECTORY ALIASES
 
