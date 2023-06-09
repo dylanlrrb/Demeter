@@ -78,48 +78,11 @@ alias s="python -m http.server 8080"
 
 alias jp='jupyter notebook --no-browser'
 
-### Hugging Face token stuff
-
-alias hfread='huggingface-cli login --token $HF_READ'
-alias hfwrite='huggingface-cli login --token $HF_WRITE'
-
 ## Python stuff
 
 alias python="python3 "
 
 alias pip="pip3 "
-
-# Pyenv stuff
-# https://realpython.com/intro-to-pyenv/#installing-pyenv
-
-# export PATH="$HOME/.pyenv/bin:$PATH"
-# eval "$(pyenv init -)"
-# eval "$(pyenv virtualenv-init -)"
-
-# # Python Version Install
-# # needs pyenv installed with brew
-# # pvi <python_version>
-# function pvi() {
-#   pyenv install $1
-# }
-
-# # list installed python versions
-# # there will be an astrisk next ti the currently active env
-# alias lspy="pyenv versions"
-
-# # createnv <python_version> <environment_name>
-# alias createnv='pyenv virtualenv '
-
-# # activatenv <environment_name>
-# alias activate='pyenv local '
-
-# function removenv() {
-#   rm -rf ~/.pyenv/versions/$1
-# }
-
-# alias lsenv="pyenv virtualenvs"
-
-# alias deactivate="pyenv local system"
 
 ### MISC
 
@@ -131,11 +94,19 @@ os() {
 }
 PS1="\[\e[36m\]\$(os) $(python -V)\[\e[m\] \W \[\e[33m\]\$(git_branch)\[\e[m\]$ "
 
+### Dev Container Stuff
+
 alias d="docker "
 alias dwd="cd ~/../tf/notebooks"
+alias src="source ../../root/.bash_profile"
 alias start="cd ~/projects/dylanlrrb.github.io && bash run_container.sh"
 alias build="cd ~/projects/dylanlrrb.github.io && bash build_image.sh"
 alias stop="d stop dylanlrrbio"
+
+### Hugging Face token stuff
+
+alias hfread='huggingface-cli login --token $HF_READ'
+alias hfwrite='huggingface-cli login --token $HF_WRITE'
 
 alias x="exit"
 
