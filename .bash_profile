@@ -61,7 +61,7 @@ git_branch() {
 os() {
  uname -s
 }
-PS1="\[\e[36m\]\$(os) $(python -V)\[\e[m\] \W \[\e[33m\]\$(git_branch)\[\e[m\]$ "
+# PS1="\[\e[36m\]\$(os) $(python -V)\[\e[m\] \W \[\e[33m\]\$(git_branch)\[\e[m\]$ "
 
 ### Dev Container Stuff
 
