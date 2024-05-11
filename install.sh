@@ -4,6 +4,9 @@ sudo apt -y update
 sudo apt install -y curl openssh-server iftop git vim nano zip unzip less htop python3-pip
 sudo apt-get install -y openssh-server make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev
 
+git config --global user.email "dylan.r.larrabee@gmail.com"
+git config --global user.name "Dylan Larrabee
+
 # https://catalog.ngc.nvidia.com/orgs/nvidia/containers/pytorch
 # https://www.tensorflow.org/install/docker
 
