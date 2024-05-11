@@ -3,8 +3,7 @@ function updateprofile() {
   git checkout .
   git checkout linux
   git pull origin linux
-  cp .bash_profile ..
-  cd ~
+  cd -
 }
 
 ### GIT HELPERS

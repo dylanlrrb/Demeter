@@ -1,5 +1,7 @@
 # Install packages
 
+Run link.sh to link the bash_profile to the correct place
+
 ```console
 dotfiles
 bash install.sh
