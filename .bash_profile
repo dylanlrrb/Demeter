@@ -4,7 +4,7 @@ function updateprofile() {
     git checkout .
     git checkout linux
     git pull origin linux
-    cd ../..
+    cd -
   else
     return 0
   fi
