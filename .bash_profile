@@ -3,8 +3,7 @@ function updateprofile() {
   git checkout .
   git checkout darwin
   git pull origin darwin
-  cp .bash_profile ..
-  cd ~
+  cd -
 }
 
 ### GIT HELPERS
