@@ -1,9 +1,9 @@
 function updateprofile() {
-  cd ~/dotfiles
+  cd ~/Demeter/Demeter
   git checkout .
   git checkout linux
   git pull origin linux
-  cd ..
+  cd ../..
 }
 
 ### GIT HELPERS
