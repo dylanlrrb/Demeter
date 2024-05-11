@@ -1,9 +1,9 @@
 function updateprofile() {
-  cd ~/dotfiles
+  cd ~/Demeter/Demeter
   git checkout .
   git checkout darwin
   git pull origin darwin
-  cd ..
+  cd ../..
 }
 
 ssh-add ~/.ssh/desktop_rsa
