@@ -40,48 +40,17 @@ alias profile='nano ~/.zshrc'
 alias lsa='ls -a'
 alias ll='ls -l'
 alias lla='ls -la'
-alias D='cd ~/Desktop'
 alias cl='clear'
+
 alias count_in_dirs='du -a | cut -d/ -f2 | sort | uniq -c'
 alias find_corrupted_images='feh -ur .'
 
 ### SSH HELPERS
 
-# Usage: `ai <address of instance>` 
-function ai() { 
-  ssh -i ~/.ssh/aws-dylan-r-lrrb.pem -L 8888:localhost:8888 ubuntu@$1
-}
-
 alias cr10='ssh -i ~/.ssh/cr10_rsa pi@192.168.0.15'
 
-alias homebase='ssh -i ~/.ssh/homebase_rsa pi@192.168.0.20'
-
-alias micro='ssh -i ~/.ssh/aws-dylan-r-lrrb.pem ec2-user@ec2-34-210-224-29.us-west-2.compute.amazonaws.com'
-
-# alias x='ssh -i ~/.ssh/desktop_rsa  dylan@192.168.0.19'
 alias x='ssh -i ~/.ssh/desktop_rsa  dylan@homebasenet.ddns.net'
 
-### RANDOM HELPERS
-
-alias ip="ifconfig en0 | sed -En 's/127.0.0.1//;s/.*inet (addr:)?(([0-9]*\.){3}[0-9]*).*/\2/p'"
-
-alias s="npx http-server"
-
-### ASM Helpers
-function compile() {
-  nasm -f elf64 $argv.asm -o $argv.o & ld $argv.o -o $1
-}
-
-# disassemble
-function dis() {
-  objdump -d $1
-}
-
-### C Helpers
-
-function c() {
-  gcc $argv.c -o $1
-}
 
 ### Docker stuff
 alias d="docker "
@@ -96,56 +65,6 @@ alias sad="ssh-add ~/.ssh/desktop_rsa"
 
 alias jp='jupyter notebook --no-browser'
 
-## Python stuff
-
-alias python="python3 "
-
-alias pip="pip3 "
-
-# Pyenv stuff
-# https://realpython.com/intro-to-pyenv/#installing-pyenv
-
-# export PATH="$HOME/.pyenv/bin:$PATH"
-# eval "$(pyenv init -)"
-# eval "$(pyenv virtualenv-init -)"
-
-# Python Version Install
-# needs pyenv installed with brew
-# pvi <python_version>
-function pvi() {
-  pyenv install $1
-}
-
-# list installed python versions
-# there will be an astrisk next ti the currently active env
-alias lspy="pyenv versions"
-
-# createnv <python_version> <environment_name>
-alias createnv='pyenv virtualenv '
-
-# activatenv <environment_name>
-alias activate='pyenv local '
-
-function removenv() {
-  rm -rf ~/.pyenv/versions/$1
-}
-
-alias lsenv="pyenv virtualenvs"
-
-alias deactivate="pyenv local system"
-
-
-### MISC
-
-git_branch() {
-  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
-}
-os() {
- uname -s
-}
-# PS1="\[\e[36m\]\$(os) $(python -V)\[\e[m\] \W \[\e[33m\]\$(git_branch)\[\e[m\]$ "
-
-alias s="python -m http.server 8080"
 
 # for restricting pernisions on directories and files
 # (only the owner can read)
