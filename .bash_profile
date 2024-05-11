@@ -59,7 +59,7 @@ alias jp='jupyter notebook --no-browser'
 
 ### MISC
 
-PS1="\u@\h \w> "
+PS1="\w > "
 
 ### Dev Container Stuff
 
