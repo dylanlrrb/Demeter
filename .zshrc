@@ -49,7 +49,14 @@ alias find_corrupted_images='feh -ur .'
 
 alias cr10='ssh -i ~/.ssh/cr10_rsa pi@192.168.0.15'
 
-alias x='ssh -i ~/.ssh/desktop_rsa  dylan@homebasenet.ddns.net'
+alias x='ssh -i ~/.ssh/desktop_rsa dylan@homebasenet.ddns.net'
+
+### RANDOM HELPERS
+
+alias tfon='x "tfon"'
+alias tfoff='x "tfoff"'
+alias torchon='x "torchon"'
+alias torchoff='x torchoff'
 
 
 ### Docker stuff
