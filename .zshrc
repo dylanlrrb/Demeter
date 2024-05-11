@@ -1,5 +1,5 @@
 function updateprofile() {
-  cd ~/Demeter/Demeter
+  cd ~/Demeter/src
   git checkout .
   git checkout darwin
   git pull origin darwin

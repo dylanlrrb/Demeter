@@ -1,2 +1,2 @@
 rm ~/.zshrc
-ln -s ~/Demeter/Demeter/.zshrc ~/.zshrc
+ln -s ~/Demeter/src/.zshrc ~/.zshrc
