@@ -59,13 +59,7 @@ alias jp='jupyter notebook --no-browser'
 
 ### MISC
 
-git_branch() {
-  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
-}
-os() {
- uname -s
-}
-# PS1="\[\e[36m\]\$(os) $(python -V)\[\e[m\] \W \[\e[33m\]\$(git_branch)\[\e[m\]$ "
+PS1="\u@\h \w> "
 
 ### Dev Container Stuff
 
