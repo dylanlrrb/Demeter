@@ -6,6 +6,8 @@ function updateprofile() {
   cd ..
 }
 
+ssh-add ~/.ssh/desktop_rsa
+
 ### GIT HELPERS
 
 alias gs='git status '
@@ -103,9 +105,9 @@ alias pip="pip3 "
 # Pyenv stuff
 # https://realpython.com/intro-to-pyenv/#installing-pyenv
 
-export PATH="$HOME/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+# export PATH="$HOME/.pyenv/bin:$PATH"
+# eval "$(pyenv init -)"
+# eval "$(pyenv virtualenv-init -)"
 
 # Python Version Install
 # needs pyenv installed with brew
