@@ -52,6 +52,10 @@ alias x='exit'
 
 ### RANDOM HELPERS
 
+alias tfon='bash Artemis/docker/tf/run.sh'
+alias tfoff='docker stop Artemis'
+alias torchon='bash Artemis/docker/torch/run.sh'
+alias torchoff='docker stop Artemis'
 
 ### Jupyter Notebook stuff
 
