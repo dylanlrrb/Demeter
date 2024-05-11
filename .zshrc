@@ -53,10 +53,10 @@ alias x='ssh -i ~/.ssh/desktop_rsa dylan@homebasenet.ddns.net'
 
 ### RANDOM HELPERS
 
-alias tfon='x "tfon"'
-alias tfoff='x "tfoff"'
-alias torchon='x "torchon"'
-alias torchoff='x torchoff'
+alias tfon='x "bash Artemis/docker/tf/run.sh"'
+alias tfoff='x "docker stop Artemis"'
+alias torchon='x "bash Artemis/docker/torch/run.sh"'
+alias torchoff='x "docker stop Artemis"'
 
 
 ### Docker stuff
