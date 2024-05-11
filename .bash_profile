@@ -1,9 +1,13 @@
 function updateprofile() {
-  cd ~/Demeter/src
-  git checkout .
-  git checkout linux
-  git pull origin linux
-  cd ../..
+  if [ -d ~/Demeter/src ]; then
+    cd ~/Demeter/src || return 1
+    git checkout .
+    git checkout linux
+    git pull origin linux
+    cd ../..
+  else
+    return 0
+  fi
 }
 
 ### GIT HELPERS
