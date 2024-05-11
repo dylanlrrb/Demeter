@@ -8,6 +8,15 @@ function updateprofile() {
   else
     return 0
   fi
+  if [ -d ~/Demeter/Demeter ]; then
+    cd ~/Demeter/Demeter || return 1
+    git checkout .
+    git checkout linux
+    git pull origin linux
+    cd -
+  else
+    return 0
+  fi
 }
 
 ### GIT HELPERS
