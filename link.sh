@@ -1,1 +1,2 @@
-ln -s .bash_profile ~/.bash_profile
+rm ~/.zshrc
+ln -s ~/dotfiles/.zshrc ~/.zshrc

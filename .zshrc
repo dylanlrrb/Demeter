@@ -3,7 +3,7 @@ function updateprofile() {
   git checkout .
   git checkout darwin
   git pull origin darwin
-  cd -
+  cd ..
 }
 
 ### GIT HELPERS
@@ -29,9 +29,8 @@ alias hist="log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short"
 alias hsit='hist '
 alias h='hist -5'
 alias clean='git clean -i'
-# alias code='open -a Visual\ Studio\ Code'
-# install `Shell Command: Install 'code' command in PATH command` from VS Code command pallete
-alias profile='code ~/.bash_profile'
+
+alias profile='nano ~/.zshrc'
 
 ### DIRECTORY ALIASES
 
@@ -141,7 +140,7 @@ git_branch() {
 os() {
  uname -s
 }
-PS1="\[\e[36m\]\$(os) $(python -V)\[\e[m\] \W \[\e[33m\]\$(git_branch)\[\e[m\]$ "
+# PS1="\[\e[36m\]\$(os) $(python -V)\[\e[m\] \W \[\e[33m\]\$(git_branch)\[\e[m\]$ "
 
 alias s="python -m http.server 8080"
 
