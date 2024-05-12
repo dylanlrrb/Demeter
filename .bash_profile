@@ -67,17 +67,14 @@ alias x='exit'
 # }
 
 function stop(){
-  local container_names=("Artemins" "Persephone" "Hephaestus")
+  local container_names=("Artemis" "Persephone" "Hephaestus")
 
   for container_name in "${container_names[@]}"
   do  
-      echo "Container $container_name test"
       # Check if the container is running
       if docker ps -a --format '{{.Names}}' | grep -Eq "^$container_name$"; then
           echo "Container $container_name is running, stopping it..."
           docker stop $container_name
-      else
-          echo "Container $container_name is not running."
       fi
   done
 }
