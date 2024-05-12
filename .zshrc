@@ -58,6 +58,34 @@ alias x='ssh -i ~/.ssh/desktop_rsa dylan@homebasenet.ddns.net'
 
 ### RANDOM HELPERS
 
+# usage: start Artemis torch
+start() {
+    if [[ "$1" == "a" || "$1" == "A" || "$1" == "Artemis" ]]; then
+        x "bash Artemis/docker/$2/run.sh"
+    fi
+
+    if [[ "$1" == "p" || "$1" == "P" || "$1" == "Persephone" ]]; then
+        x "echo 'no docker images for Persephone'"
+    fi
+
+    if [[ "$1" == "h" || "$1" == "H" || "$1" == "Hephaestus" ]]; then
+        x "echo 'no docker images for Hephaestus'"
+    fi
+}
+
+function stop(){
+  local container_names=("Artemis" "Persephone" "Hephaestus")
+
+  for container_name in "${container_names[@]}"
+  do  
+      # Check if the container is running
+      if docker ps -a --format '{{.Names}}' | grep -Eq "^$container_name$"; then
+          echo "$container_name is running, stopping..."
+          docker stop $container_name
+      fi
+  done
+}
+
 alias tfon='x "bash Artemis/docker/tf/run.sh"'
 alias tfoff='x "docker stop Artemis"'
 alias torchon='x "bash Artemis/docker/torch/run.sh"'
