@@ -67,15 +67,19 @@ function run() {
 }
 
 function stop(){
-  for container_name in "Artemins Persephone Hephaestus"
-    do  
-        echo "Container $container_name is running, stopping it..."
-        # Check if the container is running
-        # if docker ps -a --format '{{.Names}}' | grep -Eq "^$container_name$"; then
-        #     echo "Container $container_name is running, stopping it..."
-        #     docker stop $container_name
-        fi
-    done
+  local container_names=("Artemins" "Persephone" "Hephaestus")
+
+  for container_name in "${container_names[@]}"
+  do  
+      echo "Container $container_name test"
+      # Check if the container is running
+      if docker ps -a --format '{{.Names}}' | grep -Eq "^$container_name$"; then
+          echo "Container $container_name is running, stopping it..."
+          docker stop $container_name
+      else
+          echo "Container $container_name is not running."
+      fi
+  done
 }
 
 alias tfon='bash Artemis/docker/tf/run.sh'
