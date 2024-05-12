@@ -61,10 +61,19 @@ alias x='exit'
 
 ### RANDOM HELPERS
 
-# function run() {
+run() {
+    if [[ "$1" == "a" || "$1" == "A" || "$1" == "Artemis" ]]; then
+        bash Artemis/docker/$1/run.sh
+    fi
 
+    if [[ "$1" == "p" || "$1" == "P" || "$1" == "Persephone" ]]; then
+        echo "no docker images for Persephone"
+    fi
 
-# }
+    if [[ "$1" == "h" || "$1" == "H" || "$1" == "Hephaestus" ]]; then
+        echo "no docker images for Hephaestus"
+    fi
+}
 
 function stop(){
   local container_names=("Artemis" "Persephone" "Hephaestus")
@@ -73,7 +82,7 @@ function stop(){
   do  
       # Check if the container is running
       if docker ps -a --format '{{.Names}}' | grep -Eq "^$container_name$"; then
-          echo "Container $container_name is running, stopping it..."
+          echo "$container_name is running, stopping..."
           docker stop $container_name
       fi
   done
