@@ -61,10 +61,10 @@ alias x='exit'
 
 ### RANDOM HELPERS
 
-function run() {
+# function run() {
 
 
-}
+# }
 
 function stop(){
   local container_names=("Artemins" "Persephone" "Hephaestus")
