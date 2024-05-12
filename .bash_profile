@@ -61,6 +61,23 @@ alias x='exit'
 
 ### RANDOM HELPERS
 
+function run() {
+
+
+}
+
+function stop(){
+  for container_name in "Artemins Persephone Hephaestus"
+    do  
+        echo "Container $container_name is running, stopping it..."
+        # Check if the container is running
+        # if docker ps -a --format '{{.Names}}' | grep -Eq "^$container_name$"; then
+        #     echo "Container $container_name is running, stopping it..."
+        #     docker stop $container_name
+        # fi
+    done
+}
+
 alias tfon='bash Artemis/docker/tf/run.sh'
 alias tfoff='docker stop Artemis'
 alias torchon='bash Artemis/docker/torch/run.sh'
