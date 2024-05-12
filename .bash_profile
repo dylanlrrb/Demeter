@@ -63,7 +63,7 @@ alias x='exit'
 
 run() {
     if [[ "$1" == "a" || "$1" == "A" || "$1" == "Artemis" ]]; then
-        bash Artemis/docker/$1/run.sh
+        bash Artemis/docker/$2/run.sh
     fi
 
     if [[ "$1" == "p" || "$1" == "P" || "$1" == "Persephone" ]]; then
