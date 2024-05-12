@@ -74,7 +74,7 @@ function stop(){
         # if docker ps -a --format '{{.Names}}' | grep -Eq "^$container_name$"; then
         #     echo "Container $container_name is running, stopping it..."
         #     docker stop $container_name
-        # fi
+        fi
     done
 }
 
