@@ -61,7 +61,8 @@ alias x='exit'
 
 ### RANDOM HELPERS
 
-run() {
+# usage: start Artemis torch
+start() {
     if [[ "$1" == "a" || "$1" == "A" || "$1" == "Artemis" ]]; then
         bash Artemis/docker/$2/run.sh
     fi
