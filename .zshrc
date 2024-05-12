@@ -86,11 +86,6 @@ function stop(){
   done
 }
 
-alias tfon='x "bash Artemis/docker/tf/run.sh"'
-alias tfoff='x "docker stop Artemis"'
-alias torchon='x "bash Artemis/docker/torch/run.sh"'
-alias torchoff='x "docker stop Artemis"'
-
 
 ### Docker stuff
 alias d="docker "
